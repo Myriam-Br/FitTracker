@@ -139,13 +139,12 @@ export default function DashboardPage() {
       {error && <p className="text-red-500">{error}</p>}
 
       {/* Display previous day's progress */}
-      <h2 className="text-2xl font-semibold mt-8">Previous Day's Progress</h2>
       <div className="my-5">
         {yesterdayProgress === null ? (
           <p>No progress data for yesterday</p>
         ) : (
             <div  className="p-4 border rounded shadow-sm">
-              <h3 className="font-semibold text-lg">Yesterday's progress ({yesterdayProgress.date}) </h3>
+              <h3 className="font-semibold text-lg">{`Yesterday's progress `}({yesterdayProgress.date}) </h3>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <ProgressBar
                   title="Steps"
